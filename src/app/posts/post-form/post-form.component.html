@@ -1,0 +1,19 @@
+<form [formGroup]="postForm" novalidate>
+  <label>
+    Numer postu:
+    <input type="number" formControlName="id">
+  </label>
+  <label>
+    Tytuł:
+    <input type="text" formControlName="title">
+  </label>
+  <label>
+    Opis:
+    <input type="text" formControlName="description">
+  </label>
+  <label>
+    Treść:
+    <input type="text" formControlName="content">
+  </label>
+</form>
+<button (click)="addPost()">Dodaj post</button>

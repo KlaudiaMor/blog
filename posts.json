@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Mój pierwszy post",
+      "description": "Przedstawie sie",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada dictum magna vitae pellentesque. Praesent aliquam at augue ornare interdum. Morbi consequat neque sit amet suscipit blandit. Donec mollis commodo neque sit amet laoreet. Curabitur tristique tortor nec dui cursus, sed scelerisque odio luctus. Aenean hendrerit eros congue nisl feugiat malesuada. Aenean vitae consectetur dolor. Integer in lacinia dui. Quisque semper tellus in condimentum scelerisque. Aenean eros quam, dictum dictum maximus quis, condimentum vitae sem."
+    },
+    {
+      "id": 2,
+      "title": "test",
+      "description": "Donec in aliquam libero, ac interdum mauris. ",
+      "content": "Aliquam erat volutpat. In fringilla odio eget ante laoreet, nec interdum turpis volutpat. Morbi consequat, metus id ultricies mattis, massa justo sodales lacus, a cursus sapien felis ac sapien. Nam sit amet sodales nisl. Suspendisse eros lectus, cursus nec congue nec, eleifend volutpat libero. "
+    },
+    {
+      "id": 3,
+      "title": "Tommy",
+      "description": "lalalalalalala",
+      "content": "Maecenas vehicula consectetur quam eget dignissim. Donec imperdiet et justo eget imperdiet. Donec justo lorem, consectetur vel ante nec, cursus aliquet dui. Maecenas mattis scelerisque ligula, sed ultrices urna ultrices mattis. Proin hendrerit pellentesque nunc ultrices pellentesque. Fusce nec suscipit erat. Curabitur sit amet ultrices lectus, vitae rhoncus ipsum. Aliquam lacus magna, commodo nec semper vulputate, congue sit amet est."
+    }
+  ]
+}
