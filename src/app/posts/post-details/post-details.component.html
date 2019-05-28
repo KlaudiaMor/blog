@@ -1,0 +1,12 @@
+<div *ngIf="post">
+  <mat-card class="post">
+    <mat-card-title>{{post.title}}</mat-card-title>
+    <mat-card-subtitle>{{post.description}}</mat-card-subtitle>
+    <mat-card-content>{{post.content}}</mat-card-content>
+    <img mat-card-lg-image *ngIf="post.imgUrl" src="{{post.imgUrl}}">
+  </mat-card>
+
+  <button mat-flat-button routerLink="/posts/edit/{{post.id}}">Edytuj</button>
+  <button mat-flat-button (click)="removePost(post.id)">Usuń</button>
+
+</div>

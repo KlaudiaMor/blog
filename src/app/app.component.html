@@ -1,6 +1,9 @@
-<h1>Blog</h1>
-<nav>
-  <a routerLink="/posts" routerLinkActive="active">Aktualne posty</a>
-  <a routerLink="/posts/create" routerLinkActive="active">Dodaj post</a>
-</nav>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a mat-button routerLink="" routerLinkActive="active">Strona główna</a>
+    <a mat-button routerLink="/posts" routerLinkActive="active">Aktualne posty</a>
+    <a mat-button routerLink="/posts/create" routerLinkActive="active">Dodaj post</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <router-outlet></router-outlet>

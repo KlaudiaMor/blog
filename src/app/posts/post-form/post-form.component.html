@@ -1,19 +1,22 @@
-<form [formGroup]="postForm" novalidate>
-  <label>
-    Numer postu:
-    <input type="number" formControlName="id">
-  </label>
-  <label>
-    Tytuł:
-    <input type="text" formControlName="title">
-  </label>
-  <label>
-    Opis:
-    <input type="text" formControlName="description">
-  </label>
-  <label>
-    Treść:
-    <input type="text" formControlName="content">
-  </label>
+<app-post-alerts [successMessage]="successMessage"></app-post-alerts>
+<app-post-alerts [infoMessage]="infoMessage"></app-post-alerts>
+
+<form class="post-form" [formGroup]="postForm" novalidate>
+  <mat-form-field class="post-form-field">
+    <input matInput placeholder="Numer postu:" type="number" formControlName="id" required>
+  </mat-form-field>
+  <mat-form-field class="post-form-field">
+    <textarea matInput placeholder="Tytuł:" formControlName="title" required></textarea>
+  </mat-form-field>
+  <mat-form-field class="post-form-field">
+    <textarea matInput rows="2" placeholder="Opis:" formControlName="description" required></textarea>
+  </mat-form-field>
+  <mat-form-field class="post-form-field">
+    <textarea matInput rows="12" placeholder="Treść:" formControlName="content" required></textarea>
+  </mat-form-field>
+  <mat-form-field class="post-form-field">
+    <input matInput placeholder="Dodaj link do zdjęcia:" formControlName="imgUrl">
+  </mat-form-field>
 </form>
-<button (click)="addPost()">Dodaj post</button>
+
+<button mat-flat-button (click)="addPost()">Dodaj post</button>

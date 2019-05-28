@@ -1,6 +1,6 @@
-<div class="post">
-  <p>{{post.id}}</p>
-  <p>{{post.title}}</p>
-  <p>{{post.description}}</p>
-  <p>{{post.content}}</p>
-</div>
+<mat-card class="post">
+  <mat-card-title ><a routerLink="/posts/{{post.id}}">{{post.title}}</a></mat-card-title>
+  <mat-card-subtitle>{{post.description}}</mat-card-subtitle>
+  <mat-card-content>{{post.content}}</mat-card-content>
+  <img mat-card-lg-image *ngIf="post.imgUrl" src="{{post.imgUrl}}">
+</mat-card>
