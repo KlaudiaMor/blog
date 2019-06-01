@@ -1,0 +1,41 @@
+.header {
+  img {
+    width: 100%;
+  }
+}
+
+.centered {
+  position: absolute;
+  top: 88%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: white;
+  font-family: monospace;
+
+  @media(max-width: 1012px) {
+    top: 66%;
+  }
+
+  @media(max-width: 943px) {
+    left: 47%;
+  }
+
+  @media(max-width: 943px) {
+    left: 47%;
+  }
+
+  @media(max-width: 759px) {
+    top: 30%;
+    left: 49%;
+    font-size: 53px;
+  }
+
+@media(max-width: 537px) {
+    top: 23%;
+    font-size: 41px;
+  }
+
+}
+
+

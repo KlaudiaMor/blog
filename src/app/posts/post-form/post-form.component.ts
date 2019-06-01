@@ -25,7 +25,6 @@ export class PostFormComponent implements OnInit {
 
   createPostForm() {
     this.postForm = this.fb.group({
-      id: ['', Validators.required],
       title: ['', Validators.required],
       description: ['', Validators.required],
       content: ['', Validators.required],

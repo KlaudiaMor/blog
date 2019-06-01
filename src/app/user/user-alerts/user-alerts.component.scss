@@ -1,0 +1,32 @@
+.alert {
+  margin: 18px;
+
+  .successMessage {
+    background-color: rgb(70, 156, 70);
+    color: white;
+    padding: 20px;
+  }
+
+  .errorMessage {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+  }
+
+  .infoMessage {
+    background-color: rgb(202, 202, 61);
+    color: white;
+    padding: 20px;
+  }
+
+  .closebtn {
+  color: white;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+  .closebtn:hover {
+    color: black;
+  }
+}

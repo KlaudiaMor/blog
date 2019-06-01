@@ -1,0 +1,28 @@
+<app-user-alerts [successMessage]="successMessage"></app-user-alerts>
+<app-user-alerts [errorMessage]="errorMessage"></app-user-alerts>
+
+<div class="register-page">
+<mat-card>
+  <mat-card-title>Rejestracja</mat-card-title>
+  <mat-card-content>
+    <form class="register-form" [formGroup]="registerForm" novalidate>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Imię" formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Nazwisko" formControlName="lastName">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Adres email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Hasło" formControlName="password">
+      </mat-form-field>
+      <p class="register-info-msg">Hasło musi zawierać min. 6 znaków</p>
+      <div class="button">
+        <button mat-flat-button (click)="registration()">Zarejestruj się</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+</div>

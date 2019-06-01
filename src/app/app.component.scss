@@ -1,0 +1,30 @@
+.menu-login {
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  overflow-y: auto;
+  margin-top: 1000px;
+
+  mat-toolbar-row {
+    justify-content: flex-end;
+  }
+
+  span {
+    font-size: 12px;
+    font-style: italic;
+  }
+
+}
+
+.content {
+  height: 100%;
+}
+
+#footer {
+  clear: both;
+  position: relative;
+  height: 40px;
+  margin-top: -40px;
+}

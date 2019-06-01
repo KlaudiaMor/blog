@@ -10,6 +10,7 @@ export class PostAlertsComponent {
   @Input() errorMessage: string;
   @Input() infoMessage: string;
 
-  constructor() { }
+  constructor() {
+  }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from '../shared/post.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../shared/post.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -18,7 +18,8 @@ export class PostEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private postsService: PostsService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,7 +30,6 @@ export class PostEditComponent implements OnInit {
         this.post = post;
 
         this.postForm = this.fb.group({
-          'id': [this.post.id, Validators.required],
           'title': [this.post.title, Validators.required],
           'description': [this.post.description, Validators.required],
           'content': [this.post.content, Validators.required],
@@ -41,15 +41,32 @@ export class PostEditComponent implements OnInit {
 
   updatePost() {
     if (this.postForm.valid) {
-      this.postsService.updatePost(this.post.id, this.postForm.value)
+      this.postsService.updatePost(this.post._id, this.postForm.value)
         .subscribe(() => {
           this.successMessage = 'Post został zaktualizowany!';
+          window.scrollTo({
+            top: 100,
+            left: 100,
+            behavior: 'smooth'
+          });
         });
     } else {
       this.errorMessage = 'Nie udało się zaktualizować posta ;(';
+      window.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
+  }
 
-
+  removePost(id: number) {
+    if (confirm('Czy na pewno chcesz usunąć post?')) {
+      this.postsService.removePost(id)
+        .subscribe(() => {
+          this.router.navigate(['']);
+        });
+    }
   }
 
 }

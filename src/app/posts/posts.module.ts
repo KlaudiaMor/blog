@@ -26,7 +26,11 @@ import { PostAlertsComponent } from './post-alerts/post-alerts.component';
   ],
   exports: [
     PostsComponent,
-    PostsItemComponent
+    PostsItemComponent,
+    PostFormComponent,
+    PostDetailsComponent,
+    PostEditComponent,
+    PostAlertsComponent
   ],
   declarations: [
     PostsComponent,

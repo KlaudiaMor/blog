@@ -2,9 +2,6 @@
   <app-post-alerts [successMessage]="successMessage"></app-post-alerts>
   <app-post-alerts [errorMessage]="errorMessage"></app-post-alerts>
   <form class="post-form" [formGroup]="postForm" novalidate>
-    <!-- <mat-form-field class="post-form-field">
-      <input matInput placeholder="Numer postu:" type="number" formControlName="id" required>
-    </mat-form-field> -->
     <mat-form-field class="post-form-field">
       <textarea matInput placeholder="Tytuł:" formControlName="title" required></textarea>
     </mat-form-field>
@@ -20,3 +17,4 @@
   </form>
 </div>
 <button mat-flat-button (click)="updatePost()">Zapisz zmiany</button>
+<button mat-flat-button (click)="removePost(post._id)">Usuń</button>

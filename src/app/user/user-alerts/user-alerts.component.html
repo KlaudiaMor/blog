@@ -1,0 +1,15 @@
+<div class="alert">
+    <div *ngIf="successMessage" class="successMessage">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      {{successMessage}}
+    </div>
+    <div *ngIf="errorMessage" class="errorMessage">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      {{errorMessage}}
+    </div>
+    <div *ngIf="infoMessage" class="infoMessage">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      {{infoMessage}}
+    </div>
+  </div>
+

@@ -1,9 +1,20 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <a mat-button routerLink="" routerLinkActive="active">Strona główna</a>
-    <a mat-button routerLink="/posts" routerLinkActive="active">Aktualne posty</a>
     <a mat-button routerLink="/posts/create" routerLinkActive="active">Dodaj post</a>
+    <a *ngIf="!userId" class="menu-login" mat-button routerLink="/login" routerLinkActive="active">Logowanie</a>
+    <a *ngIf="userId" mat-button (click)="logOut()">Wyloguj się</a>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<footer id="footer">
+  <mat-toolbar role="footer" class="footer" color="primary">
+    <mat-toolbar-row>
+      <span>Blog by Klaudia</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>

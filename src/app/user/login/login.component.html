@@ -1,0 +1,25 @@
+<app-user-alerts [errorMessage]="errorMessage"></app-user-alerts>
+
+<div class="login-page">
+  <mat-card>
+    <mat-card-title>Logowanie</mat-card-title>
+    <mat-card-content>
+      <form class="login-form" [formGroup]="loginForm" novalidate>
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="email" formControlName="email">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input type="password" matInput placeholder="hasło" formControlName="password">
+          </mat-form-field>
+        </p>
+        <div class="button">
+          <button mat-flat-button (click)="login()">Zaloguj się</button>
+        </div>
+        <p class="register-link">Nie masz konta? <a routerLink="/register">Zarejestruj się</a></p>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
